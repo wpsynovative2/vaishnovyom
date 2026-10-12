@@ -35,9 +35,9 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header className="animate-fade-in sticky top-3 z-50 mx-3 max-w-[1200px] sm:mx-5 xl:mx-auto">
-      <div className="flex items-center justify-between rounded-full border border-gold/25 bg-white/85 px-4 py-2.5 shadow-[0_10px_40px_-18px_rgba(53,21,0,0.35)] backdrop-blur-md sm:px-6">
-        <a href="#home" className="flex shrink-0 items-center gap-3 whitespace-nowrap">
+    <header className="animate-fade-in sticky top-0 z-50 border-b border-gold/25 bg-white/85 shadow-[0_10px_40px_-18px_rgba(53,21,0,0.35)] backdrop-blur-md">
+      <div className="container-wide flex items-center justify-between py-2.5 xl:grid xl:grid-cols-[1fr_auto_1fr]">
+        <a href="#home" className="flex shrink-0 items-center gap-3 whitespace-nowrap xl:justify-self-start">
           <Image
             src="/images/logo-mark.png"
             alt="Vaishno Sky"
@@ -56,7 +56,7 @@ export default function Navbar() {
           </span>
         </a>
 
-        <nav className="hidden items-center gap-5 xl:flex 2xl:gap-7">
+        <nav className="hidden items-center gap-[clamp(20px,2vw,40px)] xl:flex">
           {links.map((l) => (
             <a
               key={l.href}
@@ -75,7 +75,7 @@ export default function Navbar() {
           ))}
         </nav>
 
-        <div className="flex shrink-0 items-center gap-3">
+        <div className="flex shrink-0 items-center gap-3 xl:justify-self-end">
           <div className="hidden sm:block">
             <a href="#enquire" className="btn btn-dark py-3">
               Enquire Now
@@ -110,8 +110,8 @@ export default function Navbar() {
           open ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
         }`}
       >
-        <div className="overflow-hidden">
-          <nav className="mt-2 flex flex-col gap-1 rounded-3xl border border-gold/25 bg-white/95 p-4 shadow-xl backdrop-blur-md">
+        <div className="container-wide overflow-hidden">
+          <nav className="mb-3 flex flex-col gap-1 rounded-3xl border border-gold/25 bg-white/95 p-4">
             {links.map((l) => (
               <a
                 key={l.href}

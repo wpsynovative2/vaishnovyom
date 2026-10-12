@@ -48,8 +48,8 @@ const values = [
 
 export function About() {
   return (
-    <section id="about" className="scroll-mt-24 bg-white pb-20 sm:pb-28">
-      <div className="container-x grid items-center gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
+    <section id="about" className="scroll-mt-24 pb-20 sm:pb-28">
+      <div className="container-wide grid items-center gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
         <Reveal className="relative mx-auto w-full max-w-md lg:max-w-none">
           <div className="relative aspect-[4/5] overflow-hidden rounded-[32px] shadow-[0_40px_80px_-40px_rgba(53,21,0,0.65)]">
             <Image
@@ -145,9 +145,12 @@ const highlightCards = [
 
 export function Highlights() {
   return (
-    <section id="highlights" className="scroll-mt-24 border-t border-gold/25">
-      <div className="py-16 sm:py-24">
-        <div className="container-x">
+    <section id="highlights" className="scroll-mt-24 pb-20 sm:pb-28">
+      <div className="relative overflow-hidden bg-cream/70 py-16 sm:py-20">
+        <div className="pointer-events-none absolute inset-0 opacity-50">
+          <Image src="/images/pattern.png" alt="" fill sizes="100vw" className="object-cover" />
+        </div>
+        <div className="container-wide relative">
           <Reveal className="flex flex-col items-center text-center">
             <Eyebrow>PROJECT HIGHLIGHTS</Eyebrow>
             <h2 className="mt-3 font-display text-4xl leading-[1.1] text-brown sm:text-5xl">
@@ -203,7 +206,7 @@ const configurations = [
 
 export function ConfigurationCards() {
   return (
-    <div className="container-x relative grid gap-5 pb-16 md:grid-cols-3 lg:pb-20">
+    <div className="container-wide relative grid gap-5 pb-16 md:grid-cols-3 lg:pb-20">
       {configurations.map((c, i) => (
         <Reveal key={c.type} delay={i * 120}>
           <article
@@ -278,8 +281,8 @@ const places = [
 
 export function Connectivity() {
   return (
-    <section id="connectivity" className="scroll-mt-24 bg-white py-20 sm:py-28">
-      <div className="container-x grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+    <section id="connectivity" className="scroll-mt-24 py-20 sm:py-28">
+      <div className="container-wide grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
         <Reveal>
           <Eyebrow>CONNECTIVITY</Eyebrow>
           <h2 className="mt-3 font-display text-4xl leading-[1.1] text-brown sm:text-5xl">

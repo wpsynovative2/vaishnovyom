@@ -51,30 +51,22 @@ const marquee = ["Go Grand", "Vaishno Sky", "Malad (E)", "Sky Residences", "Live
 
 export default function Home() {
   return (
-    <div className="relative overflow-x-clip">
-      {/* Brand pattern behind the whole page */}
-      <div className="pointer-events-none fixed inset-0 -z-10 opacity-40">
-        <Image src="/images/pattern.png" alt="" fill sizes="100vw" className="object-cover" />
-      </div>
-
-      <div className="mx-auto max-w-[1200px] p-2 sm:p-5 xl:px-0">
+    <div className="relative overflow-x-clip bg-white">
+      <div>
         <div className="relative">
-          <div className="h-3 sm:h-4" />
           <Navbar />
 
           {/* ───────── Hero ───────── */}
-          <section
-            id="home"
-            className="relative grid scroll-mt-28 gap-10 px-5 pb-10 pt-10 sm:px-10 lg:grid-cols-[1fr_0.92fr] lg:gap-12 lg:pt-14"
-          >
+          <section id="home" className="relative scroll-mt-28">
             <div className="pointer-events-none absolute -left-24 top-0 size-80 rounded-full bg-gold/15 blur-3xl" />
 
-            <div className="relative flex flex-col justify-center">
+            <div className="container-wide relative grid gap-[clamp(32px,4vw,80px)] pb-10 pt-10 lg:grid-cols-[45fr_55fr] lg:pt-14">
+            <div className="relative flex min-w-0 flex-col justify-center">
               <div className="animate-fade-up">
                 <Eyebrow>CODENAME · GO GRAND</Eyebrow>
               </div>
               <h1
-                className="animate-fade-up mt-5 font-display text-[2.900rem] leading-[1.04] text-brown sm:text-6xl xl:text-7xl"
+                className="animate-fade-up mt-5 font-display text-[clamp(48px,6vw,104px)] leading-[1.04] text-brown"
                 style={{ animationDelay: "120ms" }}
               >
                 Rise Above.
@@ -134,7 +126,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="animate-fade-up relative mt-8 min-w-0 lg:mt-0" style={{ animationDelay: "200ms" }}>
+            <div className="animate-fade-up relative mt-8 min-w-0 lg:mt-0 lg:self-center" style={{ animationDelay: "200ms" }}>
               <HeroSlider />
               {/* Floating Go Grand lockup */}
               <div className="animate-float pointer-events-none absolute -left-3 -top-8 w-36 sm:-left-12 sm:-top-10 sm:w-52">
@@ -149,11 +141,12 @@ export default function Home() {
                 />
               </div>
             </div>
+            </div>
           </section>
 
           {/* ───────── Enquiry bar ───────── */}
-          <section id="enquire" className="scroll-mt-28 px-3 sm:px-10">
-            <Reveal>
+          <section id="enquire" className="scroll-mt-28">
+            <Reveal className="container-wide">
               <div className="rounded-[28px] border border-gold/25 bg-white p-5 shadow-[0_24px_60px_-30px_rgba(53,21,0,0.35)] sm:p-6 lg:rounded-full lg:py-4 lg:pl-6 lg:pr-4">
                 <EnquiryForm />
               </div>
@@ -161,11 +154,11 @@ export default function Home() {
           </section>
 
           {/* ───────── Stats ───────── */}
-          <section className="px-3 pt-6 sm:px-10">
-            <Reveal delay={100}>
-              <div className="grid divide-y divide-gold/25 rounded-[28px] bg-cream/70 px-6 md:grid-cols-3 md:divide-x md:divide-y-0 md:px-2 md:py-6">
+          <section className="mt-6 bg-cream/70">
+            <Reveal delay={100} className="container-wide">
+              <div className="grid divide-y divide-gold/25 md:grid-cols-3 md:divide-x md:divide-y-0 md:py-6">
                 {stats.map((s) => (
-                  <div key={s.label} className="group flex items-center justify-between gap-4 py-5 md:px-8 md:py-0">
+                  <div key={s.label} className="group flex items-center justify-between gap-4 py-5 md:px-8 md:py-0 md:first:pl-0 md:last:pr-0">
                     <div>
                       <p className="font-numeral text-5xl font-bold leading-none tracking-wide text-brown">
                         {s.value}
@@ -188,8 +181,8 @@ export default function Home() {
           </section>
 
           {/* ───────── The Tower (elevations) ───────── */}
-          <section id="overview" className="scroll-mt-24 px-5 py-20 sm:px-10 sm:py-28">
-            <Reveal>
+          <section id="overview" className="scroll-mt-24 py-20 sm:py-28">
+            <Reveal className="container-wide">
               <ElevationGallery />
             </Reveal>
           </section>
@@ -198,7 +191,7 @@ export default function Home() {
           <Highlights />
 
           {/* ───────── Marquee ───────── */}
-          <div className="relative left-1/2 w-screen -translate-x-1/2 overflow-hidden border-y border-gold/25 bg-cream/60 py-4">
+          <div className="overflow-hidden border-y border-gold/25 bg-cream/60 py-4">
             <div className="animate-marquee flex w-max">
               {[0, 1].map((dup) => (
                 <div key={dup} aria-hidden={dup === 1} className="flex shrink-0 items-center">
@@ -214,7 +207,8 @@ export default function Home() {
           </div>
 
           {/* ───────── Amenities ───────── */}
-          <section id="amenities" className="scroll-mt-24 px-5 py-20 sm:px-10 sm:py-28">
+          <section id="amenities" className="scroll-mt-24 py-20 sm:py-28">
+            <div className="container-wide">
             <Reveal>
               <div className="flex flex-wrap items-end justify-between gap-6">
                 <div>
@@ -229,9 +223,9 @@ export default function Home() {
               </div>
             </Reveal>
 
-            <div className="no-scrollbar -mx-5 mt-10 flex snap-x gap-8 overflow-x-auto px-8 py-8 sm:-mx-10 sm:px-12 lg:mx-0 lg:grid lg:grid-cols-5 lg:gap-9 lg:overflow-visible lg:px-3">
+            <div className="mt-10 flex flex-wrap justify-center gap-x-8 gap-y-12 px-3 py-8 lg:grid lg:grid-cols-5 lg:gap-9">
               {amenities.map((a, i) => (
-                <Reveal key={a.name} delay={i * 110} className="w-52 shrink-0 snap-center lg:w-auto">
+                <Reveal key={a.name} delay={i * 110} className="w-[calc(50%-1rem)] sm:w-[calc(33.333%-1.34rem)] lg:w-auto">
                   <article className={`group text-center ${i % 2 ? "lg:translate-y-10" : ""}`}>
                     <div className="capsule aspect-[5/8]">
                       <div className="relative size-full overflow-hidden rounded-full">
@@ -254,18 +248,19 @@ export default function Home() {
                 </Reveal>
               ))}
             </div>
+            </div>
           </section>
 
           {/* ───────── Configuration (dark) ───────── */}
-          <section id="configuration" className="scroll-mt-24 px-2 sm:px-5">
-            <div className="relative overflow-hidden rounded-[28px] bg-brown text-cream sm:rounded-[36px]">
+          <section id="configuration" className="scroll-mt-24">
+            <div className="relative overflow-hidden bg-brown text-cream">
               <div className="brand-border" />
               <div className="pointer-events-none absolute inset-0 opacity-[0.07]">
                 <Image src="/images/pattern.png" alt="" fill sizes="100vw" className="object-cover" />
               </div>
               <div className="pointer-events-none absolute -right-32 top-10 size-96 rounded-full bg-gold/20 blur-[110px]" />
 
-              <div className="relative grid items-center gap-14 px-6 py-16 sm:px-12 lg:grid-cols-2 lg:py-24">
+              <div className="container-wide relative grid items-center gap-14 py-16 lg:grid-cols-2 lg:py-24">
                 <Reveal>
                   <Eyebrow light>CONFIGURATION</Eyebrow>
                   <h2 className="mt-3 font-display text-4xl leading-[1.1] sm:text-5xl">
@@ -337,9 +332,9 @@ export default function Home() {
           <Connectivity />
 
           {/* ───────── CTA banner ───────── */}
-          <section id="contact" className="scroll-mt-24 px-2 pb-3 sm:px-5 sm:pb-5">
+          <section id="contact" className="scroll-mt-24">
             <Reveal>
-              <div className="relative overflow-hidden rounded-[28px] sm:rounded-[36px]">
+              <div className="relative overflow-hidden">
                 <Image
                   src="/images/elevation-reveal.jpg"
                   alt="The grand unveiling of the tower"
@@ -348,7 +343,7 @@ export default function Home() {
                   className="animate-kenburns object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-plum/95 via-plum/70 to-plum/20" />
-                <div className="relative flex flex-col items-start gap-8 px-6 py-16 sm:px-12 lg:flex-row lg:items-center lg:justify-between lg:py-20">
+                <div className="container-wide relative flex flex-col items-start gap-8 py-16 lg:flex-row lg:items-center lg:justify-between lg:py-20">
                   <div className="max-w-xl">
                     <Eyebrow light>CONTACT US</Eyebrow>
                     <h2 className="mt-3 font-display text-4xl leading-[1.1] text-white sm:text-5xl">
@@ -367,7 +362,7 @@ export default function Home() {
             </Reveal>
 
             {/* ───────── Footer ───────── */}
-            <footer className="flex flex-col items-center gap-6 px-4 pb-6 pt-14 text-center">
+            <footer className="container-wide flex flex-col items-center gap-6 pb-6 pt-14 text-center">
               <Image
                 src="/images/logo-full.png"
                 alt="Vaishno Sky, Malad (E)"

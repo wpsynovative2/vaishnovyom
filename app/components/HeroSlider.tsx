@@ -42,7 +42,7 @@ export default function HeroSlider() {
 
   return (
     <div
-      className="relative h-full min-h-[460px] overflow-hidden rounded-[32px] shadow-[0_40px_80px_-40px_rgba(53,21,0,0.6)] sm:min-h-[560px]"
+      className="relative h-full min-h-[460px] overflow-hidden rounded-[32px] shadow-[0_40px_80px_-40px_rgba(53,21,0,0.6)] sm:min-h-[560px] lg:h-[min(78vh,760px)] lg:min-h-[460px]"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
@@ -58,7 +58,7 @@ export default function HeroSlider() {
             src={s.src}
             alt={s.alt}
             fill
-            sizes="(min-width: 1024px) 46vw, 100vw"
+            sizes="(min-width: 1024px) 55vw, 100vw"
             loading={i === 0 ? "eager" : "lazy"}
             fetchPriority={i === 0 ? "high" : "auto"}
             className={`animate-kenburns object-cover ${s.position}`}
