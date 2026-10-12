@@ -1,0 +1,253 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* Brand palette (from the Vaishno Sky guide) */
+  --color-gold: #cda454;
+  --color-gold-light: #ecd59a;
+  --color-gold-deep: #a47c2e;
+  --color-brown: #351500;
+  --color-plum: #2a1022;
+  --color-cream: #fff3e1;
+  --color-ink: #351500;
+  --color-muted: #7d6654;
+
+  --font-display: var(--font-baskervville), "Baskerville", Georgia, serif;
+  --font-sans: var(--font-montserrat), "Segoe UI", system-ui, sans-serif;
+  --font-label: var(--font-avenir), var(--font-montserrat), sans-serif;
+  --font-numeral: var(--font-bebas), "Impact", sans-serif;
+
+  --animate-fade-up: fade-up 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+  --animate-fade-in: fade-in 1.2s ease both;
+  --animate-float: float 7s ease-in-out infinite;
+  --animate-float-slow: float 10s ease-in-out infinite;
+  --animate-kenburns: kenburns 18s ease-in-out infinite alternate;
+  --animate-marquee: marquee 38s linear infinite;
+  --animate-spin-slow: spin 28s linear infinite;
+  --animate-glow: glow 4s ease-in-out infinite;
+  --animate-border-slide: border-slide 40s linear infinite;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-1.5deg);
+  }
+  50% {
+    transform: translateY(-14px) rotate(1deg);
+  }
+}
+
+@keyframes kenburns {
+  from {
+    transform: scale(1.04) translate(0, 0);
+  }
+  to {
+    transform: scale(1.16) translate(-1.5%, -2%);
+  }
+}
+
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    filter: drop-shadow(0 10px 24px rgb(205 164 84 / 0.35));
+  }
+  50% {
+    filter: drop-shadow(0 14px 38px rgb(255 190 60 / 0.6));
+  }
+}
+
+@keyframes sheen {
+  from {
+    transform: translateX(-130%) skewX(-20deg);
+  }
+  to {
+    transform: translateX(230%) skewX(-20deg);
+  }
+}
+
+@keyframes gold-shift {
+  to {
+    background-position: 200% center;
+  }
+}
+
+@keyframes border-slide {
+  to {
+    background-position: -1197px 0;
+  }
+}
+
+body {
+  background: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+::selection {
+  background: var(--color-gold);
+  color: var(--color-brown);
+}
+
+@layer components {
+  /* Animated metallic gold text */
+  .text-gold-gradient {
+    background: linear-gradient(
+      100deg,
+      #a47c2e 0%,
+      #cda454 22%,
+      #f6e3ad 45%,
+      #cda454 68%,
+      #a47c2e 100%
+    );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: gold-shift 7s linear infinite;
+  }
+
+  /* The gold chevron border strip from the brand guide */
+  .brand-border {
+    height: 28px;
+    background: url("/images/border.png") 0 0 / 1197px 28px repeat-x;
+    animation: var(--animate-border-slide);
+  }
+
+  /* The brand's capsule shape: used for amenity images and buttons */
+  .capsule {
+    position: relative;
+    border-radius: 9999px;
+  }
+  .capsule::before {
+    content: "";
+    position: absolute;
+    inset: -9px;
+    border-radius: inherit;
+    border: 1px solid var(--color-gold);
+    pointer-events: none;
+    transition:
+      inset 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+      opacity 0.5s;
+  }
+  .group:hover .capsule::before {
+    inset: -14px;
+  }
+
+  .btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    overflow: hidden;
+    border-radius: 9999px;
+    padding: 0.95rem 1.7rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transition:
+      transform 0.3s,
+      box-shadow 0.3s,
+      background-color 0.3s,
+      color 0.3s;
+  }
+  .btn:hover {
+    transform: translateY(-2px);
+  }
+  .btn::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 40%;
+    background: linear-gradient(90deg, transparent, rgb(255 255 255 / 0.45), transparent);
+    transform: translateX(-130%) skewX(-20deg);
+  }
+  .btn:hover::after {
+    animation: sheen 0.9s ease;
+  }
+  .btn-dark {
+    background: var(--color-brown);
+    color: var(--color-gold-light);
+    box-shadow:
+      0 0 0 1px var(--color-brown),
+      0 0 0 4px #fff,
+      0 0 0 5px var(--color-gold),
+      0 14px 28px -10px rgb(53 21 0 / 0.55);
+  }
+  .btn-gold {
+    background: linear-gradient(120deg, #b98f3c, #e7cd8a 50%, #c29a45);
+    color: var(--color-brown);
+    box-shadow: 0 14px 30px -10px rgb(205 164 84 / 0.8);
+  }
+  .btn-ghost {
+    color: var(--color-brown);
+    box-shadow: inset 0 0 0 1px rgb(205 164 84 / 0.7);
+  }
+  .btn-ghost:hover {
+    background: var(--color-cream);
+  }
+
+  /* Scroll reveal (toggled by components/Reveal.tsx) */
+  .reveal {
+    opacity: 0;
+    transform: translateY(36px);
+    transition:
+      opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+    transition-delay: var(--reveal-delay, 0ms);
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
