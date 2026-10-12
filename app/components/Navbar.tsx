@@ -35,7 +35,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header className="animate-fade-in sticky top-3 z-50 mx-3 sm:mx-5">
+    <header className="animate-fade-in sticky top-3 z-50 mx-3 max-w-[1200px] sm:mx-5 xl:mx-auto">
       <div className="flex items-center justify-between rounded-full border border-gold/25 bg-white/85 px-4 py-2.5 shadow-[0_10px_40px_-18px_rgba(53,21,0,0.35)] backdrop-blur-md sm:px-6">
         <a href="#home" className="flex shrink-0 items-center gap-3 whitespace-nowrap">
           <Image

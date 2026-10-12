@@ -159,6 +159,24 @@ body {
     inset: -14px;
   }
 
+  /* Page content column: section backgrounds run full width, content stays within 1200px */
+  .container-x {
+    width: 100%;
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-inline: 1.25rem;
+  }
+  @media (min-width: 40rem) {
+    .container-x {
+      padding-inline: 2.5rem;
+    }
+  }
+  @media (min-width: 80rem) {
+    .container-x {
+      padding-inline: 0;
+    }
+  }
+
   .btn {
     position: relative;
     display: inline-flex;

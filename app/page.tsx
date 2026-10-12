@@ -57,8 +57,8 @@ export default function Home() {
         <Image src="/images/pattern.png" alt="" fill sizes="100vw" className="object-cover" />
       </div>
 
-      <div className="mx-auto max-w-[1360px] p-2 sm:p-5">
-        <div className="relative rounded-[28px] bg-white shadow-[0_30px_120px_-50px_rgba(53,21,0,0.45)] sm:rounded-[40px]">
+      <div className="mx-auto max-w-[1200px] p-2 sm:p-5 xl:px-0">
+        <div className="relative">
           <div className="h-3 sm:h-4" />
           <Navbar />
 
@@ -198,7 +198,7 @@ export default function Home() {
           <Highlights />
 
           {/* ───────── Marquee ───────── */}
-          <div className="overflow-hidden border-y border-gold/25 bg-cream/60 py-4">
+          <div className="relative left-1/2 w-screen -translate-x-1/2 overflow-hidden border-y border-gold/25 bg-cream/60 py-4">
             <div className="animate-marquee flex w-max">
               {[0, 1].map((dup) => (
                 <div key={dup} aria-hidden={dup === 1} className="flex shrink-0 items-center">
