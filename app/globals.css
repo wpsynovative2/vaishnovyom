@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme inline {
-  /* Brand palette (from the Vaishno Sky guide) */
+  /* Brand palette (from the Vaishno Vyom guide) */
   --color-gold: #cda454;
   --color-gold-light: #ecd59a;
   --color-gold-deep: #a47c2e;

@@ -6,21 +6,21 @@ import { useEffect, useState } from "react";
 const slides = [
   {
     src: "/images/elevation-clouds.jpg",
-    alt: "Vaishno Sky tower rising above the clouds",
+    alt: "Vaishno Vyom tower rising above the clouds",
     title: "A Home Above the Clouds",
-    note: "The Vaishno Sky tower, Malad (East)",
+    note: "The Vaishno Vyom tower, Malad (East)",
     position: "object-center",
   },
   {
     src: "/images/balcony.jpg",
-    alt: "Golden-hour skyline view from a Vaishno Sky residence",
+    alt: "Golden-hour skyline view from a Vaishno Vyom residence",
     title: "The Sky Deck View",
     note: "Golden-hour skyline, every evening",
     position: "object-[70%_center]",
   },
   {
     src: "/images/elevation-boulevard.jpg",
-    alt: "Vaishno Sky seen from the boulevard",
+    alt: "Vaishno Vyom seen from the boulevard",
     title: "A New City Landmark",
     note: "Standing tall over a tree-lined avenue",
     position: "object-[62%_center]",

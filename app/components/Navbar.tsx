@@ -39,16 +39,16 @@ export default function Navbar() {
       <div className="container-wide flex items-center justify-between py-2.5 xl:grid xl:grid-cols-[1fr_auto_1fr]">
         <a href="#home" className="flex shrink-0 items-center gap-3 whitespace-nowrap xl:justify-self-start">
           <Image
-            src="/images/logo-mark.png"
-            alt="Vaishno Sky"
+            src="/images/vaishno-vyom-mark.png"
+            alt="Vaishno Vyom"
             width={400}
-            height={374}
+            height={357}
             className="h-10 w-auto sm:h-11"
             preload
           />
           <span className="font-label leading-none">
             <span className="block text-[15px] tracking-[0.2em] text-gold-deep">
-              VAISHNO SKY
+              VAISHNO VYOM
             </span>
             <span className="mt-1 block text-[10px] tracking-[0.34em] text-gold">
               MALAD (E)

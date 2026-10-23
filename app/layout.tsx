@@ -39,9 +39,9 @@ const bebas = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Vaishno Sky, Malad (E) | Codename Go Grand",
+  title: "Vaishno Vyom, Malad (E) | Codename Go Grand",
   description:
-    "Vaishno Sky — sky-high residences in Malad (East), Mumbai. Codename Go Grand: grand homes, curated amenities and golden-hour views.",
+    "Vaishno Vyom — sky-high residences in Malad (East), Mumbai. Codename Go Grand: grand homes, curated amenities and golden-hour views.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

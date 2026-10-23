@@ -44,7 +44,7 @@ export default function ElevationGallery() {
             <Image
               key={v.src}
               src={v.src}
-              alt={`Vaishno Sky elevation — ${v.label}`}
+              alt={`Vaishno Vyom elevation — ${v.label}`}
               fill
               sizes="(min-width: 1024px) 52vw, 100vw"
               className={`object-cover transition-all duration-[1200ms] ease-out ${
@@ -82,14 +82,14 @@ export default function ElevationGallery() {
               <path id="seal" d="M50 50m-37 0a37 37 0 1 1 74 0a37 37 0 1 1-74 0" />
             </defs>
             <text className="fill-gold-light font-label text-[9px] tracking-[0.32em]">
-              <textPath href="#seal">VAISHNO SKY · MALAD (E) · GO GRAND ·</textPath>
+              <textPath href="#seal">VAISHNO VYOM · MALAD (E) · GO GRAND ·</textPath>
             </text>
           </svg>
           <Image
-            src="/images/logo-mark.png"
+            src="/images/vaishno-vyom-mark.png"
             alt=""
             width={400}
-            height={374}
+            height={357}
             className="w-11"
           />
         </div>

@@ -47,7 +47,7 @@ const residenceFeatures = [
   "Vastu-friendly, thoughtfully planned layouts",
 ];
 
-const marquee = ["Go Grand", "Vaishno Sky", "Malad (E)", "Sky Residences", "Live Above"];
+const marquee = ["Go Grand", "Vaishno Vyom", "Malad (E)", "Sky Residences", "Live Above"];
 
 export default function Home() {
   return (
@@ -314,8 +314,8 @@ export default function Home() {
                   </div>
                   <div className="animate-float-slow absolute -bottom-2 left-1/2 w-28 -translate-x-1/2 sm:w-32">
                     <Image
-                      src="/images/logo-badge.png"
-                      alt="Vaishno Sky, Malad (E)"
+                      src="/images/vaishno-vyom-badge.png"
+                      alt="Vaishno Vyom, Malad (E)"
                       width={600}
                       height={847}
                       sizes="130px"
@@ -351,7 +351,7 @@ export default function Home() {
                     </h2>
                     <p className="mt-4 text-[15px] leading-relaxed text-cream/80">
                       Register your interest for priority access, launch offers and a
-                      private walkthrough of Vaishno Sky.
+                      private walkthrough of Vaishno Vyom.
                     </p>
                   </div>
                   <a href="#enquire" className="btn btn-gold shrink-0">
@@ -364,10 +364,10 @@ export default function Home() {
             {/* ───────── Footer ───────── */}
             <footer className="container-wide flex flex-col items-center gap-6 pb-6 pt-14 text-center">
               <Image
-                src="/images/logo-full.png"
-                alt="Vaishno Sky, Malad (E)"
+                src="/images/vaishno-vyom-full.png"
+                alt="Vaishno Vyom, Malad (E)"
                 width={600}
-                height={644}
+                height={538}
                 sizes="140px"
                 className="h-auto w-32"
               />
@@ -387,7 +387,7 @@ export default function Home() {
                 indicative and subject to change.
               </p>
               <p className="font-label text-[11px] tracking-[0.25em] text-gold-deep">
-                © VAISHNO SKY · MALAD (E), MUMBAI
+                © VAISHNO VYOM · MALAD (E), MUMBAI
               </p>
             </footer>
           </section>

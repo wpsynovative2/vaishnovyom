@@ -54,7 +54,7 @@ export function About() {
           <div className="relative aspect-[4/5] overflow-hidden rounded-[32px] shadow-[0_40px_80px_-40px_rgba(53,21,0,0.65)]">
             <Image
               src="/images/elevation-dusk.jpg"
-              alt="Vaishno Sky at dusk"
+              alt="Vaishno Vyom at dusk"
               fill
               sizes="(min-width: 1024px) 40vw, 100vw"
               className="object-cover object-[35%_center] transition duration-[1500ms] hover:scale-105"
@@ -85,7 +85,7 @@ export function About() {
             Building homes that <span className="text-gold-gradient">stand tall</span>
           </h2>
           <p className="mt-5 max-w-xl text-[15px] leading-relaxed text-muted">
-            Vaishno Sky is conceived as a landmark for Malad (East) — a single,
+            Vaishno Vyom is conceived as a landmark for Malad (East) — a single,
             striking tower where considered architecture meets everyday comfort.
             Our promise is simple: a grander way of living, delivered with care.
           </p>
@@ -328,7 +328,7 @@ export function Connectivity() {
         <Reveal delay={150} className="relative min-w-0">
           <div className="relative overflow-hidden rounded-[32px] border border-gold/40 shadow-[0_40px_80px_-40px_rgba(53,21,0,0.55)]">
             <iframe
-              title="Vaishno Sky location — Malad (East), Mumbai"
+              title="Vaishno Vyom location — Malad (East), Mumbai"
               src="https://www.google.com/maps?q=Malad+East,+Mumbai&z=14&output=embed"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
@@ -341,7 +341,7 @@ export function Connectivity() {
               <Icon d="M12 21s7-6 7-11a7 7 0 0 0-14 0c0 5 7 11 7 11Zm0-9a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" className="relative size-5" />
             </span>
             <span>
-              <span className="block font-label text-[10px] tracking-[0.25em] text-gold">VAISHNO SKY</span>
+              <span className="block font-label text-[10px] tracking-[0.25em] text-gold">VAISHNO VYOM</span>
               <span className="block text-sm font-semibold text-cream">Malad (East), Mumbai</span>
             </span>
           </div>

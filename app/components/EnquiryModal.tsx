@@ -107,8 +107,8 @@ export default function EnquiryModal() {
 
             <div className="relative flex flex-1 flex-col p-9">
               <Image
-                src="/images/logo-badge.png"
-                alt="Vaishno Sky, Malad (E)"
+                src="/images/vaishno-vyom-badge.png"
+                alt="Vaishno Vyom, Malad (E)"
                 width={600}
                 height={847}
                 sizes="80px"
@@ -145,7 +145,7 @@ export default function EnquiryModal() {
               </ul>
 
               <p className="mt-auto pt-10 font-label text-[10px] tracking-[0.3em] text-gold/80">
-                VAISHNO SKY · MALAD (E), MUMBAI
+                VAISHNO VYOM · MALAD (E), MUMBAI
               </p>
             </div>
             <div className="brand-border relative" />
@@ -254,7 +254,7 @@ export default function EnquiryModal() {
                       defaultChecked
                       className="mt-0.5 size-4 shrink-0 accent-gold-deep"
                     />
-                    I agree to be contacted by the Vaishno Sky team via phone, WhatsApp, SMS or email.
+                    I agree to be contacted by the Vaishno Vyom team via phone, WhatsApp, SMS or email.
                   </label>
 
                   <button type="submit" className="btn btn-gold w-full py-4 sm:col-span-2">
